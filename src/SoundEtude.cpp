@@ -21,17 +21,6 @@
 #include <iostream>
 #include <iomanip>
 
-#include <yaml-cpp/yaml.h>
-
-#include <glbinding/gl/gl.h>
-#include <glbinding/Binding.h>
-using namespace gl;
-
-#define GLFW_INCLUDE_NONE
-#include <GLFW/glfw3.h>
-
-#include <Utility/Logging.hpp>
-#include <Utility/Configuration.hpp>
 #include <Receivers/Etude.hpp>
 
 #include <IO/OSCInput.hpp>
