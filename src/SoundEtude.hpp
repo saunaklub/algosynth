@@ -25,16 +25,15 @@
 #include <vector>
 #include <map>
 
-#include <etudes/IO/OSCInput.hpp>
-
+#include <IO/OSCInput.hpp>
 
 namespace SoundGenerator {
-    class etudes::Etude;
+    class Etude;
 
     class SoundEtude {
     public:
         using etudes_t =
-            std::vector<std::pair<std::string, std::unique_ptr<Etude>>>;
+            std::vector<std::pair<std::string, std::unique_ptr<etudes::Etude>>>;
 
         SoundEtude();
         ~SoundEtude();
