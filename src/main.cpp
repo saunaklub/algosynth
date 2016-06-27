@@ -23,7 +23,7 @@
 #include <SoundEtude.hpp>
 
 int main(){
-    etudes::SoundEtude sound;
+    SoundGenerator::SoundEtude sound;
 
     sound.initialise();
 

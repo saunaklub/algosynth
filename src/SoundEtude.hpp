@@ -25,11 +25,11 @@
 #include <vector>
 #include <map>
 
-#include <IO/OSCInput.hpp>
+#include <etudes/IO/OSCInput.hpp>
 
 
-namespace etudes {
-    class Etude;
+namespace SoundGenerator {
+    class etudes::Etude;
 
     class SoundEtude {
     public:
@@ -46,7 +46,7 @@ namespace etudes {
         void initOSC();
 
         etudes_t etudes;
-        OSCInput oscInput;
+        etudes::OSCInput oscInput;
     };
 }
 

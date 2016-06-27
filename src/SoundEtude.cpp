@@ -27,7 +27,7 @@
 
 #include "SoundEtude.hpp"
 
-namespace etudes {
+namespace SoundGenerator {
     SoundEtude::SoundEtude() :
         oscInput(etudes, 6667) {
         }
