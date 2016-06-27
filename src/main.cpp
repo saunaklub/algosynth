@@ -19,17 +19,18 @@
 */
 
 #include <cstdio>
+#include<iostream>
 #include <SoundEtude.hpp>
 
 int main(){
     etudes::SoundEtude sound;
 
     sound.initialise();
-    std::putchar('a');
-    int b = sound.outputChar(0,0,0,0);
-    std::putchar('b');
-    for(int i = 0;; ++i) std::putchar(sound.outputChar(i , 1, i >> 14, 12));
-    std::putchar('c');
+
+    for(int i = 0;; ++i) {
+        std::cout << (char)sound.outputChar(i , 1, i >> 14, 12);
+        std::cout.flush();
+    }
 
     return 0;
 }
