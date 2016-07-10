@@ -22,6 +22,8 @@ endif()
 
 find_package(PkgConfig REQUIRED)
 find_package(etudes REQUIRED)
+find_package(OpenGL REQUIRED)
+find_package(glfw CONFIG NAMES glfw glfw3)
 
 pkg_search_module(LIBLO REQUIRED liblo)
 

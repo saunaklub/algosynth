@@ -21,15 +21,11 @@
 #include <iostream>
 #include <iomanip>
 
-#include <Receivers/Etude.hpp>
-
-#include <IO/OSCInput.hpp>
-
 #include "SoundEtude.hpp"
 
 namespace SoundGenerator {
     SoundEtude::SoundEtude() :
-        oscInput(etudes, 6667) {
+        oscInput(6667) {
         }
 
     SoundEtude::~SoundEtude() {
