@@ -22,19 +22,15 @@ endif()
 
 find_package(PkgConfig REQUIRED)
 find_package(etudes REQUIRED)
-find_package(OpenGL REQUIRED)
-find_package(glfw CONFIG NAMES glfw glfw3)
 
 pkg_search_module(LIBLO REQUIRED liblo)
 
 
 target_include_directories(${SYNTH}
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/
-    PUBLIC ${LIBLO_INCLUDE_DIRS}
     PUBLIC ${ETUDES_INCLUDE_DIRS}
     )
 
 target_link_libraries(${SYNTH}
-    PUBLIC ${LIBLO_LIBRARIES}
     PUBLIC ${ETUDES_LIBRARIES}
     )
