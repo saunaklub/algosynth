@@ -23,9 +23,6 @@ endif()
 find_package(PkgConfig REQUIRED)
 find_package(etudes REQUIRED)
 
-pkg_search_module(LIBLO REQUIRED liblo)
-
-
 target_include_directories(${SYNTH}
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/
     PUBLIC ${ETUDES_INCLUDE_DIRS}
