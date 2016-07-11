@@ -20,15 +20,20 @@
 
 #include <cstdio>
 #include<iostream>
+#include <IO/OSCInput.hpp>
 #include <SoundEtude.hpp>
 
 int main(){
+    
     SoundGenerator::SoundEtude sound;
 
-    sound.initialise();
+    etudes::OSCInput oscInput(6667);
+    oscInput.start();
+
 
     for(int i = 0;; ++i) {
-        std::cout << (char)sound.outputChar(i , 1, i >> 14, 12);
+        //std::cout << (char)sound.outputChar(i , 1, i >> 14, 12);
+        std::cout << (char) sound.saw(i * 4);
         std::cout.flush();
     }
 

@@ -24,11 +24,17 @@
 #include "SoundEtude.hpp"
 
 namespace SoundGenerator {
-    SoundEtude::SoundEtude() :
-        oscInput(6667) {
+    SoundEtude::SoundEtude() {
+            registerInputs();
         }
 
-    SoundEtude::~SoundEtude() {
+    void SoundEtude::registerInputs(){
+        registerInput("/octave", vec_int_t{1});
+    }
+
+    int SoundEtude::saw (int freq) {
+        auto octave =  getValue<int>("/octave");
+        return freq * octave;
     }
 
     int SoundEtude::outputChar(int i,int x, int t, int o){
@@ -36,14 +42,4 @@ namespace SoundGenerator {
                 (3&x&( i * ( ( 3 & i >> 16 ? "BY}6YB6%" : "Qj}6jQ6%" ) [t%8] + 51) >> o)
                 ) << 4 );
     };
-
-
-    void SoundEtude::initialise() {
-        initOSC();
-    }
-
-
-    void SoundEtude::initOSC() {
-        oscInput.start();
-    }
 }

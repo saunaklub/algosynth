@@ -25,33 +25,25 @@
 #include <vector>
 #include <map>
 
-#include <IO/OSCInput.hpp>
 #include <Receivers/Receiver.hpp>
 
 namespace SoundGenerator {
 
     class SoundEtude : public etudes::Receiver {
     public:
-        using receivers_t =
-            std::vector<std::pair<std::string, std::unique_ptr<etudes::Receiver>>>;
         
         virtual void
-        registerInputs() override {};    
+        registerInputs() override;    
 
         SoundEtude();
-        ~SoundEtude();
 
-        void initialise();
+        int saw (int freq);
         int outputChar(int i, int x, int t, int o);
 
     private:
-        void initOSC();
 
-        receivers_t receiver;
-        etudes::OSCInput oscInput;
-
-        template <typename T> bool
-        dispatchValueT(std::string input, const T &value);
+        //template <typename T> bool
+        //dispatchValueT(std::string input, const T &value);
     };
 }
 
