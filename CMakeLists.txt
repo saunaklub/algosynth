@@ -21,12 +21,15 @@ if("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
 endif()
 
 find_package(etudes REQUIRED)
+find_package(glbinding REQUIRED)
 
 target_include_directories(${SYNTH}
     PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/src/
     PUBLIC ${ETUDES_INCLUDE_DIRS}
+    PUBLIC ${GLBINDING_INCLUDES}
     )
 
 target_link_libraries(${SYNTH}
     PUBLIC ${ETUDES_LIBRARIES}
+    glbinding
     )
