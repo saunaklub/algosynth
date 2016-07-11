@@ -20,7 +20,6 @@ if("${CMAKE_BUILD_TYPE}" STREQUAL "Debug")
     add_definitions("-DDEBUG")
 endif()
 
-find_package(PkgConfig REQUIRED)
 find_package(etudes REQUIRED)
 
 target_include_directories(${SYNTH}
